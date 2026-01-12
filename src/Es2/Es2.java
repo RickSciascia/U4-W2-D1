@@ -14,10 +14,10 @@ public class Es2 {
         try {
 //            int result = km / lt;
             double result = km / lt;
+            if (Double.isInfinite(result)) throw new RuntimeException();
             System.out.println("La tua auto percorre: " + result + " Km/L!");
         } catch (Exception e) {
             System.out.println("Ciao purtoppo hai diviso i km percorsi per 0 è impossibile");
-            throw new RuntimeException(e);
         }
         System.out.println("Ciao, vengo visualizzato se tutto è stato fatto correttamente");
 
